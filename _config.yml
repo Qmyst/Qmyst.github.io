@@ -7,7 +7,7 @@ description: "某绅士的无聊兴趣"
 keyword: "Hanayuki,qmyst,sadtdw"
 url: "Hanayuki.me"          # 填写你的博客地址
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/Qmyst/Qmyst.github.io" # you code repository
+#github_repo: "https://github.com/Qmyst/Qmyst.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # 是否开启侧边栏.
