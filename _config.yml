@@ -11,19 +11,19 @@ github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code
 
 # Sidebar settings
 sidebar: true                           # 是否开启侧边栏.
-sidebar-about-description: 势必征服全世界的妹妹  # 侧边栏约-描述
+sidebar-about-description: 势必征服全世界的meimei  # 侧边栏约-描述
 sidebar-avatar: /img/avatar-g.png      # 你的个人头像 这里你可以改成我在img文件夹中的两张备用照片 img/avatar-m 或 avatar-g
 
 
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
+# weibo_username:
 zhihu_username:     sadtdw
-github_username:    hanayuki
+github_username:    sadtdw
 facebook_username:  username
 jianshu_username:   sadtdw
-#twitter_username:   qiubaiying
+#twitter_username:
 
 
 
@@ -56,7 +56,7 @@ kramdown:
 
 # 评论系统
 # Disqus settings（https://disqus.com/）
-disqus_username: qiubaiying
+#disqus_username:
 
 # 多说 将于2017年6月1日正式关停服务，建议使用 Disqus（http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241）
 # Duoshuo settings
@@ -66,14 +66,14 @@ disqus_username: qiubaiying
 
 
 
-
+#   网站统计
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+#ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto
+#ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+#ga_domain: auto
 
 
 
@@ -86,7 +86,7 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 
 
 # Progressive Web Apps
-chrome-tab-theme-color: "#000000"
+chrome-tab-theme-color: "#fff"
 service-worker: true
 
 
