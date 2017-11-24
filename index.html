@@ -19,7 +19,7 @@ description: "某绅士的无聊兴趣"
         </div>
     </a>
     {% if post.article-img %}
-    <img src="{{ post.article-img }}" alt="" width="50%">
+    <img src="{{ post.article-img }}" alt="" width="75%">
     {% endif %}
     <p class="post-meta">
         Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
