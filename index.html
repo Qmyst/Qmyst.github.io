@@ -43,3 +43,33 @@ description: "某绅士的无聊兴趣"
     {% endif %}
 </ul>
 {% endif %}
+<style>
+    .top {
+        width: 50%;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+</style>
+<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="box" alt="">
+<script>
+    window.onload = function () {
+        let timer  = null;
+        document.getElementById('box').onclick = function(){
+            cancelAnimationFrame(timer);
+            timer = requestAnimationFrame(function fn(){
+                var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                if(oTop > 0){
+                    document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/10);
+                    timer = requestAnimationFrame(fn);
+                }else{
+                    cancelAnimationFrame(timer);
+                }
+            });
+        }
+        
+        
+    }
+
+
+</script>
