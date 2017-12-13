@@ -45,20 +45,35 @@ description: "某绅士的无聊兴趣"
 {% endif %}
 <style>
     .top {
-        width: 50%;
+        width: 25%;
         position: fixed;
-        right: 10px;
-        bottom: 10px;
+        right: 0;
+        bottom: 0;
     }
 </style>
-<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="box" alt="">
+<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="">
 <script>
     window.onload = function () {
+        function scroll() {
+            return {
+                "top": window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop,
+                "left":  window.pageXOffset || document.body.scrollLeft || document.documentElement.scrollLeft
+            }
+        }
+        let img = document.getElementById("scrollTop");
+        window.onscroll = function () {
+//                console.log(window.pageYOffset);
+            if (scroll().top > 2333){
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        }
         let timer  = null;
-        document.getElementById('box').onclick = function(){
+        img.onclick = function(){
             cancelAnimationFrame(timer);
             timer = requestAnimationFrame(function fn(){
-                var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                let oTop = document.body.scrollTop || document.documentElement.scrollTop;
                 if(oTop > 0){
                     document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/10);
                     timer = requestAnimationFrame(fn);
