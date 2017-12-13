@@ -44,11 +44,14 @@ description: "某绅士的无聊兴趣"
 </ul>
 {% endif %}
 <style>
+    @media screen and (max-width: 768px) {
+        .top { width: 50%; }
+    }
     body {
         background-color: rgb(213, 242, 216);
     }
     .top {
-        width: 50%;
+        width: 25%;
         position: fixed;
         right: -10%;
         bottom: -15%;
@@ -79,7 +82,7 @@ description: "某绅士的无聊兴趣"
             timer = requestAnimationFrame(function fn(){
                 var oTop = document.body.scrollTop || document.documentElement.scrollTop;
                 if(oTop > 0){
-                    document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/8);
+                    document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/5);
                     timer = requestAnimationFrame(fn);
                 }else{
                     cancelAnimationFrame(timer);
