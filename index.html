@@ -44,16 +44,15 @@ description: "某绅士的无聊兴趣"
 </ul>
 {% endif %}
 <style>
+    body {
+        background-color: rgb(202, 230, 205);
+    }
     .top {
+        background: url("http://hanayuki.me/img/sis-ruyue.png");
         width: 25%;
         position: fixed;
         right: 0;
         bottom: 0;
-        -webkit-transition:all .5s;
-        -moz-transition: all .5s;
-        -ms-transition:all .5s;
-        -o-transition:all .5s;
-        transition: all .5s;
         display: none;
     }
 </style>
@@ -69,10 +68,10 @@ description: "某绅士的无聊兴趣"
         let img = document.getElementById("scrollTop");
         window.onscroll = function () {
 //                console.log(window.pageYOffset);
-            if (scroll().top > 2333){
-                img.style.display = "block";
+            if (scroll().top > 1333){
+                $('.top').fadeIn(500);
             } else {
-                img.style.display = "none";
+                $('.top').fadeIn(500);
             }
         }
         let timer  = null;
@@ -81,7 +80,7 @@ description: "某绅士的无聊兴趣"
             timer = requestAnimationFrame(function fn(){
                 let oTop = document.body.scrollTop || document.documentElement.scrollTop;
                 if(oTop > 0){
-                    document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/10);
+                    document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/8);
                     timer = requestAnimationFrame(fn);
                 }else{
                     cancelAnimationFrame(timer);
