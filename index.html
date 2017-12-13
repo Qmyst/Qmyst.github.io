@@ -64,7 +64,7 @@ description: "某绅士的无聊兴趣"
                 "left":  window.pageXOffset || document.body.scrollLeft || document.documentElement.scrollLeft
             }
         }
-        let img = document.getElementById("scrollTop");
+        var img = document.getElementById("scrollTop");
         window.onscroll = function () {
 //                console.log(window.pageYOffset);
             if (scroll().top > 1333){
@@ -73,11 +73,11 @@ description: "某绅士的无聊兴趣"
                 $('.top').fadeOut(500);
             }
         }
-        let timer  = null;
+        var timer  = null;
         img.onclick = function(){
             cancelAnimationFrame(timer);
             timer = requestAnimationFrame(function fn(){
-                let oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                var oTop = document.body.scrollTop || document.documentElement.scrollTop;
                 if(oTop > 0){
                     document.body.scrollTop = document.documentElement.scrollTop = oTop - (oTop/8);
                     timer = requestAnimationFrame(fn);
