@@ -45,14 +45,13 @@ description: "某绅士的无聊兴趣"
 {% endif %}
 <style>
     body {
-        background-color: rgb(202, 230, 205);
+        background-color: rgb(213, 242, 216);
     }
     .top {
-        background: url("http://hanayuki.me/img/sis-ruyue.png");
         width: 25%;
         position: fixed;
-        right: 0;
-        bottom: 0;
+        right: -10%;
+        bottom: -15%;
         display: none;
     }
 </style>
@@ -71,7 +70,7 @@ description: "某绅士的无聊兴趣"
             if (scroll().top > 1333){
                 $('.top').fadeIn(500);
             } else {
-                $('.top').fadeIn(500);
+                $('.top').fadeOut(500);
             }
         }
         let timer  = null;
