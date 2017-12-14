@@ -293,14 +293,14 @@ comments: true
     @media screen and (max-width: 768px) {
         .top { width: 50%;
             right: -20%;
-            bottom: -20%;}
+            bottom: -15%;}
     }
 </style>
-{% if post.topScrollImg %}
-<img src="{{ post.topScrollImg }}" class="top" id="scrollTop" alt="">
-{% else %}
+<!--{% if post.topScrollImg %}-->
+<!--<img src="{{ post.topScrollImg }}" class="top" id="scrollTop" alt="">-->
+<!--{% else %}-->
 <img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="">
-{% endif %}
+<!--{% endif %}-->
 <script>
     window.onload = function () {
         function scroll() {
