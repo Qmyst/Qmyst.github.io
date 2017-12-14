@@ -296,11 +296,11 @@ comments: true
             bottom: -15%;}
     }
 </style>
-<!--{% if post.topScrollImg %}-->
-<!--<img src="{{ post.topScrollImg }}" class="top" id="scrollTop" alt="">-->
+{% if post.topScroll-img %}
+<img src="{{ post.topScroll-img }}" class="top" id="scrollTop" alt="">
 <!--{% else %}-->
-<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="">
-<!--{% endif %}-->
+<!--<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="">-->
+{% endif %}
 <script>
     window.onload = function () {
         function scroll() {
