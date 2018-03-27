@@ -298,6 +298,7 @@ comments: true
         border-radius: 15px;
         transition: all .5s;
         border: 1px solid #E6E6EB;
+        position: relative;
         padding: 3px;
     }
     img:hover {
@@ -346,7 +347,7 @@ comments: true
                 bool = true;
             }
         }
-        imgs[i].onmouseover = function () {
+        imgs[i].onmouseleave = function () {
             this.style.transform = "scale(1)";
         }
     }
