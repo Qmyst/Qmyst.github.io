@@ -118,7 +118,10 @@ description: "某绅士的无聊兴趣"
         for (var i=0;i<imgs.length;i++){
             imgs[i].index = i;
             imgs[i].onclick = function () {
-//                alert(1);
+                alert(this.style.width);
+//                if (this.style.width === imgs[this.index].naturalWidth+"px"){
+//                    alert(1);
+//                }
                 this.style.width = imgs[this.index].naturalWidth+"px";
             }
         }
