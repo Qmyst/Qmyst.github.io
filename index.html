@@ -3,6 +3,26 @@ layout: page
 description: "某绅士的无聊兴趣"
 ---
 
+<script>
+    var imgs = document.getElementsByClassName('scale');
+    var original = '';
+    for (var i=0;i<imgs.length;i++){
+        var bool = true;
+        imgs[i].index = i;
+        imgs[i].onclick = function () {
+//                alert(1);
+            if (bool){
+                original = this.style.width;
+                this.style.width = imgs[this.index].naturalWidth+"px";
+                bool = false;
+            } else {
+                this.style.width = original;
+                bool = true;
+            }
+        }
+    }
+</script>
+
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -126,23 +146,5 @@ description: "某绅士的无聊兴趣"
 
 
 </script>
-<script>
-    var imgs = document.getElementsByClassName('scale');
-    var original = '';
-    for (var i=0;i<imgs.length;i++){
-        var bool = true;
-        imgs[i].index = i;
-        imgs[i].onclick = function () {
-//                alert(1);
-            if (bool){
-                original = this.style.width;
-                this.style.width = imgs[this.index].naturalWidth+"px";
-                bool = false;
-            } else {
-                this.style.width = original;
-                bool = true;
-            }
-        }
-    }
-</script>
+
 <script src="http://hanayuki.me/img/js/canvas-nest.min.js"></script>
