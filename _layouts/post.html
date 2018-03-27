@@ -7,7 +7,7 @@ comments: true
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
+<script src="http://hanayuki.me/img/js/canvas-nest.min.js"></script>
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
@@ -283,7 +283,8 @@ comments: true
     body {
         /*background-color: rgb(223, 242, 216);*/
         /*background-color: #dceffe;*/
-        background: #dceffe url(http://hanayuki.me/img/bg.jpg) 0 0 repeat;
+        /*background: #dceffe url(http://hanayuki.me/img/bg.jpg) 0 0 repeat;*/
+        cursor: url("http://hanayuki.me/img/cursor/huaji.png");
     }
     .top {
         width: 25% !important;
@@ -291,6 +292,9 @@ comments: true
         right: -10%;
         bottom: -15%;
         display: none;
+    }
+    a:hover {
+        cursor: url("http://hanayuki.me/img/cursor/yinxian.png");
     }
     @media screen and (max-width: 768px) {
         .top { width: 50%;
