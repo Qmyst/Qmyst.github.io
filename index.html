@@ -114,11 +114,21 @@ description: "某绅士的无聊兴趣"
             });
         }
         console.log(img.width);
-        $(".scale").click(function () {
-//            console.log($(".scale").eq($(this).index()));
-            $(this).css("width","100%");
-
-        })
+        var imgs = document.getElementsByClassName('scale');
+        for (var i=0;i<imgs.length;i++){
+            imgs[i].index = i;
+            imgs[i].onclick = function () {
+                for (var j=0;j<imgs.length;j++){
+                    imgs[j].style.width = imgs[this.index].naturalWidth;
+                }
+            }
+        }
+//        $('.scale').click(function () {
+////            console.log($(".scale").eq($(this).index()));
+//            var s = 233;
+//            $(this).css("width",s);
+//
+//        })
         
     }
 
