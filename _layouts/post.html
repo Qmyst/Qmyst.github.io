@@ -339,6 +339,7 @@ comments: true
 //                original = this.style.width;
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                 this.style.transform = "scale(1.5)";
+                this.style.marginTop = "-15%";
                 this.style.zIndex = 233;
 //                bool = false;
             } else {
@@ -349,6 +350,7 @@ comments: true
         }
         imgs[i].onmouseleave = function () {
             this.style.transform = "scale(1)";
+            this.style.marginTop = "0";
             this.style.zIndex = 0;
         }
     }
