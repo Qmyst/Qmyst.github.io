@@ -292,16 +292,16 @@ comments: true
         bottom: -15%;
         display: none;
     }
-    /*img {*/
-        /*-webkit-border-radius: 15px;*/
-        /*-moz-border-radius: 15px;*/
-        /*border-radius: 15px;*/
-        /*transition: all .5s;*/
-        /*border: 1px solid #E6E6EB;*/
-        /*padding: 2px;*/
-    /*}*/
+    img {
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        transition: all .5s;
+        border: 1px solid #E6E6EB;
+        padding: 2px;
+    }
     img:hover {
-        border: 1px solid #9940d1;
+        border: 1px solid #3dabca;
     }
     a:hover {
         cursor: url("http://hanayuki.me/img/cursor/yinxian.png"), auto;
@@ -315,7 +315,7 @@ comments: true
 <!--{% if post.topScroll-img %}-->
 <!--<img src="{{ post.topScroll-img }}" class="top" id="scrollTop" alt="">-->
 <!--{% else %}-->
-<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="" style="border: none">
+<img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="" style="border: none;transition: none;">
 <!--{% endif %}-->
 <script>
     window.onload = function () {
