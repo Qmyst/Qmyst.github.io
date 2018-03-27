@@ -338,12 +338,16 @@ comments: true
 //                original = this.style.width;
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                 this.style.transform = "scale(1.5)";
+                this.style.zIndex = 233;
                 bool = false;
             } else {
 //                this.style.width = "65%";
                 this.style.transform = "scale(1)";
                 bool = true;
             }
+        }
+        imgs[i].onmouseover = function () {
+            this.style.transform = "scale(1)";
         }
     }
 </script>
