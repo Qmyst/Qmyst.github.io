@@ -340,15 +340,16 @@ comments: true
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                 this.style.transform = "scale(1.5)";
                 this.style.zIndex = 233;
-                bool = false;
+//                bool = false;
             } else {
 //                this.style.width = "65%";
-                this.style.transform = "scale(1)";
-                bool = true;
+//                this.style.transform = "scale(1)";
+//                bool = true;
             }
         }
         imgs[i].onmouseleave = function () {
             this.style.transform = "scale(1)";
+            this.style.zIndex = 0;
         }
     }
 </script>
