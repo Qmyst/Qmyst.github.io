@@ -298,10 +298,14 @@ comments: true
         border-radius: 15px;
         transition: all .5s;
         border: 1px solid #E6E6EB;
-        padding: 2px;
+        padding: 3px;
     }
     img:hover {
         border: 1px solid #3dabca;
+        padding: 0;
+        box-shadow: 3px 6px 30px #777;
+        -moz-box-shadow: 3px 6px 30px #777;
+        -webkit-box-shadow: 3px 6px 30px #777;
     }
     a:hover {
         cursor: url("http://hanayuki.me/img/cursor/yinxian.png"), auto;
@@ -321,6 +325,26 @@ comments: true
 <!--{% else %}-->
 <img src="http://hanayuki.me/img/sis-ruyue.png" class="top" id="scrollTop" alt="" style="border: none;transition: none;">
 <!--{% endif %}-->
+
+<script>
+    var imgs = document.getElementsByTagName('img');
+//    var original = '';
+    for (var i=0;i<imgs.length;i++){
+        var bool = true;
+        imgs[i].index = i;
+        imgs[i].onclick = function () {
+//                alert(1);
+            if (bool){
+//                original = this.style.width;
+                this.style.width = imgs[this.index].naturalWidth+"px";
+                bool = false;
+            } else {
+                this.style.width = "65%";
+                bool = true;
+            }
+        }
+    }
+</script>
 <script>
     window.onload = function () {
         function scroll() {
