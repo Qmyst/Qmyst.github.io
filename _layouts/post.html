@@ -338,8 +338,10 @@ comments: true
             if (bool){
 //                original = this.style.width;
 //                this.style.width = imgs[this.index].naturalWidth+"px";
+                if (imgs[0]){
+
+                }
                 this.style.transform = "scale(1.5)";
-                this.style.marginTop = "-15%";
                 this.style.zIndex = 233;
 //                bool = false;
             } else {
@@ -352,6 +354,9 @@ comments: true
             this.style.transform = "scale(1)";
             this.style.marginTop = "0";
             this.style.zIndex = 0;
+        }
+        imgs[0].onclick = function () {
+            this.style.marginTop = "15%";
         }
     }
 </script>
