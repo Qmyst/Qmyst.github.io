@@ -336,10 +336,12 @@ comments: true
 //                alert(1);
             if (bool){
 //                original = this.style.width;
-                this.style.width = imgs[this.index].naturalWidth+"px";
+//                this.style.width = imgs[this.index].naturalWidth+"px";
+                this.style.transform = "scale(1.5)";
                 bool = false;
             } else {
-                this.style.width = "65%";
+//                this.style.width = "65%";
+                this.style.transform = "scale(1)";
                 bool = true;
             }
         }
