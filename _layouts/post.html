@@ -306,11 +306,11 @@ comments: true
         transition: all .3s;
         position: fixed;
         top:15%;
-        right: -180px;
+        right: -130px;
     }
     iframe:hover {
         opacity: 1;
-        right: -130px;
+        right: 0;
     }
     img:hover {
         border: 2px solid #3dabca;
@@ -475,17 +475,17 @@ comments: true
             });
         }
 
-        var myif = document.getElementById("iFrame");
-        var bool = true;
-        IframeOnClick.track(myif, function() {
-            if (bool) {
-                myif.style.right = 0;
-                bool = false;
-            } else {
-                myif.style.right = "-180px";
-                bool = true;
-            }
-        });
+//        var myif = document.getElementById("iFrame");
+//        var bool = true;
+//        IframeOnClick.track(myif, function() {
+//            if (bool) {
+//                myif.style.right = 0;
+//                bool = false;
+//            } else {
+//                myif.style.right = "-180px";
+//                bool = true;
+//            }
+//        });
 
     }
 
