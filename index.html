@@ -102,16 +102,17 @@ description: "某绅士的无聊兴趣"
                 }
                 original = this.style.width;
                 this.style.width = imgs[this.index].naturalWidth+"px";
-//                bool = false;
+                bool = false;
             } else {
-//                this.style.marginLeft = "0";
-//                this.style.width = original;
-//                bool = true;
+                this.style.marginLeft = "0";
+                this.style.width = original;
+                bool = true;
             }
         }
         imgs[i].onmouseleave = function () {
             this.style.marginLeft = "0";
             this.style.width = original;
+            bool = true;
         }
     }
 </script>
