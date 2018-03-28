@@ -95,27 +95,27 @@ description: "某绅士的无聊兴趣"
         imgs[i].index = i;
         if (document.body.offsetWidth > 768){
             console.log(233);
-        }
-        imgs[i].onclick = function () {
+            imgs[i].onclick = function () {
 //                alert(1);
-            if (bool){
-                if(imgs[this.index].naturalWidth >= document.body.offsetWidth/2) {
-                    console.log(1);
-                    this.style.marginLeft = "-15%";
+                if (bool){
+                    if(imgs[this.index].naturalWidth >= document.body.offsetWidth/2) {
+                        console.log(1);
+                        this.style.marginLeft = "-15%";
+                    }
+                    original = this.style.width;
+                    this.style.width = imgs[this.index].naturalWidth+"px";
+                    bool = false;
+                } else {
+                    this.style.marginLeft = "0";
+                    this.style.width = original;
+                    bool = true;
                 }
-                original = this.style.width;
-                this.style.width = imgs[this.index].naturalWidth+"px";
-                bool = false;
-            } else {
+            }
+            imgs[i].onmouseleave = function () {
                 this.style.marginLeft = "0";
                 this.style.width = original;
                 bool = true;
             }
-        }
-        imgs[i].onmouseleave = function () {
-            this.style.marginLeft = "0";
-            this.style.width = original;
-            bool = true;
         }
     }
 </script>
