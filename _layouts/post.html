@@ -346,16 +346,17 @@ comments: true
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                     if (this === imgs[0]){
 //                        this.style.marginTop = "150px";
-                        this.style.transition = "transform .5s,padding .5s,border .5s,box-shadow .5s";
-                        var speed = 10;
-                        clearInterval(imgs[0].timer);
-                        imgs[0].timer = setInterval(function () {
-                            imgs[0].style.marginTop = speed + "px";
-                            speed +=10;
-                            if (speed >= 150){
-                                clearInterval(imgs[0].timer);
-                            }
-                        },15)
+
+//                        this.style.transition = "transform .5s,padding .5s,border .5s,box-shadow .5s";
+//                        var speed = 10;
+//                        clearInterval(imgs[0].timer);
+//                        imgs[0].timer = setInterval(function () {
+//                            imgs[0].style.marginTop = speed + "px";
+//                            speed +=10;
+//                            if (speed >= 150){
+//                                clearInterval(imgs[0].timer);
+//                            }
+//                        },15)
                     }
                     this.style.transform = "scale(1.5)";
                     this.style.zIndex = 233;
