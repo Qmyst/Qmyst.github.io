@@ -346,7 +346,14 @@ comments: true
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                     if (this === imgs[0]){
 //                        this.style.marginTop = "150px";
-                        animation(imgs[0],150);
+                        var speed = 10;
+                        imgs[0].timer = setInterval(function () {
+                            imgs[0].style.marginTop = speed + "px";
+                            speed +=10;
+                            if (speed >= 150){
+                                clearInterval(imgs[0].timer);
+                            }
+                        })
                     }
                     this.style.transform = "scale(1.5)";
                     this.style.zIndex = 233;
