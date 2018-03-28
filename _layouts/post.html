@@ -302,13 +302,15 @@ comments: true
         padding: 4px;
     }
     iframe {
+        opacity: 0.75;
         transition: all .3s;
         position: fixed;
-        top:20%;
-        right: -280px;
+        top:15%;
+        right: -180px;
     }
     iframe:hover {
-        right: -230px;
+        opacity: 1;
+        right: -130px;
     }
     img:hover {
         border: 2px solid #3dabca;
@@ -474,9 +476,15 @@ comments: true
         }
 
         var myif = document.getElementById("iFrame");
+        var bool = true;
         IframeOnClick.track(myif, function() {
-            myif.style.right = 0;
-//            alert(1);
+            if (bool) {
+                myif.style.right = 0;
+                bool = false;
+            } else {
+                myif.style.right = "-180px";
+                bool = true;
+            }
         });
 
     }
@@ -486,4 +494,4 @@ comments: true
 
 <script src="http://hanayuki.me/img/js/canvas-nest.min.js"></script>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430" id="iFrame"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=300 src="//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430" id="iFrame"></iframe>
