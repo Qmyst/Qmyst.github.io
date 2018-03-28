@@ -66,6 +66,17 @@ description: "某绅士的无聊兴趣"
         border: 2px solid #E6E6EB;
         padding: 4px;
     }
+    iframe {
+        opacity: 0.75;
+        transition: all .3s;
+        position: fixed;
+        top:15%;
+        right: -180px;
+    }
+    iframe:hover {
+        opacity: 1;
+        right: 0;
+    }
     img:hover {
         border: 2px solid #3dabca;
         padding: 0;
@@ -83,6 +94,9 @@ description: "某绅士的无聊兴趣"
         }
         body {
             background-size: 50%;
+        }
+        iframe {
+            display: none;
         }
     }
 </style>
@@ -170,3 +184,5 @@ description: "某绅士的无聊兴趣"
 </script>
 
 <script src="http://hanayuki.me/img/js/canvas-nest.min.js"></script>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=300 src="//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430" id="iFrame"></iframe>
