@@ -333,30 +333,33 @@ comments: true
     for (var i=0;i<imgs.length;i++){
         var bool = true;
         imgs[i].index = i;
-        imgs[i].onclick = function () {
+        if (document.body.offsetWidth > 768){
+            imgs[i].onclick = function () {
 //                alert(1);
-            if (bool){
+                if (bool){
 //                original = this.style.width;
 //                this.style.width = imgs[this.index].naturalWidth+"px";
-                if (this === imgs[0]){
-                    this.style.marginTop = "150px";
-                }
-                this.style.transform = "scale(1.5)";
-                this.style.zIndex = 233;
-                bool = false;
-            } else {
+                    if (this === imgs[0]){
+                        this.style.marginTop = "150px";
+                    }
+                    this.style.transform = "scale(1.5)";
+                    this.style.zIndex = 233;
+                    bool = false;
+                } else {
 //                this.style.width = "65%";
+                    this.style.transform = "scale(1)";
+                    this.style.marginTop = "0";
+                    bool = true;
+                }
+            }
+            imgs[i].onmouseleave = function () {
                 this.style.transform = "scale(1)";
                 this.style.marginTop = "0";
+                this.style.zIndex = 0;
                 bool = true;
             }
         }
-        imgs[i].onmouseleave = function () {
-            this.style.transform = "scale(1)";
-            this.style.marginTop = "0";
-            this.style.zIndex = 0;
-            bool = true;
-        }
+
     }
 </script>
 <script>
