@@ -328,6 +328,9 @@ comments: true
         body {
             background-size: 50%;
         }
+        iframe {
+            display: none;
+        }
     }
 </style>
 <!--{% if post.topScroll-img %}-->
@@ -348,7 +351,7 @@ comments: true
         var bool = true;
         imgs[i].index = i;
         if (document.body.offsetWidth > 768){
-            document.getElementById("iFrame").src = "//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430";
+
             imgs[i].onclick = function () {
 //                alert(1);
                 if (bool){
@@ -483,4 +486,4 @@ comments: true
 
 <script src="http://hanayuki.me/img/js/canvas-nest.min.js"></script>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="" id="iFrame"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430" id="iFrame"></iframe>
