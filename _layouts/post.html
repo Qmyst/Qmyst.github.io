@@ -297,9 +297,9 @@ comments: true
         -moz-border-radius: 15px;
         border-radius: 15px;
         transition: transform .5s,padding .5s,border .5s,box-shadow .5s;
-        border: 3px solid #E6E6EB;
+        border: 2px solid #E6E6EB;
         position: relative;
-        padding: 3px;
+        padding: 4px;
     }
     img:hover {
         border: 2px solid #3dabca;
@@ -355,7 +355,7 @@ comments: true
                             if (speed >= 150){
                                 clearInterval(imgs[0].timer);
                             }
-                        })
+                        },15)
                     }
                     this.style.transform = "scale(1.5)";
                     this.style.zIndex = 233;
