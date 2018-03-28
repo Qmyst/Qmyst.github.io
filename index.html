@@ -93,6 +93,9 @@ description: "某绅士的无聊兴趣"
     for (var i=0;i<imgs.length;i++){
         var bool = true;
         imgs[i].index = i;
+        if (document.body.offsetWidth > 768){
+            console.log(233);
+        }
         imgs[i].onclick = function () {
 //                alert(1);
             if (bool){

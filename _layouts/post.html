@@ -339,7 +339,7 @@ comments: true
 //                original = this.style.width;
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                 if (this === imgs[0]){
-
+                    this.style.marginTop = "150px";
                 }
                 this.style.transform = "scale(1.5)";
                 this.style.zIndex = 233;
@@ -355,12 +355,6 @@ comments: true
             this.style.marginTop = "0";
             this.style.zIndex = 0;
             bool = true;
-        }
-        imgs[0].onclick = function () {
-            this.style.transform = "scale(1.5)";
-            this.style.zIndex = 233;
-            this.style.marginTop = "180px";
-            bool = false;
         }
     }
 </script>
