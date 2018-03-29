@@ -148,10 +148,10 @@ description: "某绅士的无聊兴趣"
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             for(var i = n; i < len; i++) {
                 if(images[i].offsetTop < seeHeight + scrollTop) {
-//                    if(images[i].getAttribute('src') === 'http://hanayuki.me/img/loading/loading.gif') {
+                    if(images[i].getAttribute('src') === 'http://hanayuki.me/img/loading/loading.gif') {
                         console.log("lazy");
                         images[i].src = images[i].getAttribute('data-src');
-//                    }
+                    }
                     n = n + 1;
                 }
             }
@@ -160,7 +160,7 @@ description: "某绅士的无聊兴趣"
 //    var loadImages = lazyload();
 //    loadImages();          //初始化首页的页面图片
     lazyload();
-    window.addEventListener('scroll', lazyload);
+    window.addEventListener('scroll', lazyload, false);
 </script>
 <script>
     window.onload = function () {
