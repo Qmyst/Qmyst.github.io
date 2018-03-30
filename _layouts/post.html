@@ -361,7 +361,7 @@ comments: true
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                     if (this === imgs[0]){
                         this.style.marginTop = "125px";
-                        this.style.transform = "scale(1.25) !important";
+                        this.style.transform = "scale(1.25)";
 //                        this.style.transition = "transform .5s,padding .5s,border .5s,box-shadow .5s";
 //                        var speed = 10;
 //                        clearInterval(imgs[0].timer);
@@ -372,8 +372,9 @@ comments: true
 //                                clearInterval(imgs[0].timer);
 //                            }
 //                        },15)
+                    } else {
+                        this.style.transform = "scale(1.5)";
                     }
-                    this.style.transform = "scale(1.5)";
                     this.style.zIndex = 233;
                     bool = false;
                 } else {
