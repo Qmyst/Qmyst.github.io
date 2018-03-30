@@ -62,6 +62,7 @@ description: "某绅士的无聊兴趣"
         display: none;
     }
     img {
+        opacity: 0;
         margin-left: 10%;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
@@ -176,6 +177,7 @@ description: "某绅士的无聊兴趣"
         for (var i=n;i<imgs.length;i++){
             if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
                 imgs[i].style.marginLeft = 0;
+                imgs[i].style.opacity = 1;
             }
         }
     }
