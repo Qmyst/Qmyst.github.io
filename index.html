@@ -144,8 +144,6 @@ description: "某绅士的无聊兴趣"
         var len    = images.length;
         var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历
 //        return function() {
-        return {
-            loadImgs: function () {
                 var seeHeight = document.documentElement.clientHeight;
                 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                 for(var i = n; i < len; i++) {
@@ -157,15 +155,13 @@ description: "某绅士的无聊兴趣"
                         n = n + 1;
                     }
                 }
-            }
-        }
 
 //        }
     }
 //    var loadImages = lazyload();
 //    loadImages();          //初始化首页的页面图片
-    lazyload().loadImgs();
-    window.addEventListener('scroll', lazyload().loadImgs, false);
+    lazyload();
+    window.addEventListener('scroll', lazyload, false);
 </script>
 <script>
     window.onload = function () {
