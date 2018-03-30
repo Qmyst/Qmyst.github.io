@@ -173,7 +173,7 @@ description: "某绅士的无聊兴趣"
         var n = 0;
         var seeHeight = document.documentElement.clientHeight;
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        for (var i=n;i<divs.length;i++){
+        for (var i=n;i<imgs.length;i++){
             if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
                 imgs[i].style.marginLeft = 0;
             }
