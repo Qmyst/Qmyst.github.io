@@ -50,7 +50,10 @@ description: "某绅士的无聊兴趣"
         background: #dceffe url(http://hanayuki.me/img/bg.jpg) 0 0 repeat;
         cursor: url("http://hanayuki.me/img/cursor/huaji.png"), auto;
     }
-
+    .post-preview {
+        margin-top: 10%;
+        transition: margin-top 1.5s;
+    }
     .top {
         width: 25% !important;
         position: fixed;
@@ -162,6 +165,22 @@ description: "某绅士的无聊兴趣"
 //    loadImages();          //初始化首页的页面图片
     lazyload();
     window.addEventListener('scroll', lazyload, false);
+
+//    往上移动效果
+    function moveUp() {
+        var divs = document.getElementsByClassName("post-preview");
+        var n = 0;
+        var seeHeight = document.documentElement.clientHeight;
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        for (var i=n;i<divs.length;i++){
+            if(divs[i].offsetTop<=scrollTop){
+                divs[i].style.marginTop = 0;
+            }
+        }
+    }
+    moveUp();
+    window.addEventListener('scroll', moveUp, false);
+
 </script>
 <script>
     window.onload = function () {
