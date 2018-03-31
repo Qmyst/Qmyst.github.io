@@ -107,7 +107,14 @@ description: "某绅士的无聊兴趣"
         }
     }
 </style>
-<img src="http://hanayuki.me/img/sis-dujiaoshou.png" class="top" id="scrollTop" alt="">
+<img src="http://hanayuki.me/img/sis-dujiaoshou.png" class="top" id="scrollTop" alt=""
+     style="border: none;
+        transition: padding .5s;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        padding: 4px;"
+>
 <script>
     var imgs = document.getElementsByClassName('scale');
     var original = '';
@@ -149,7 +156,7 @@ description: "某绅士的无聊兴趣"
                 var seeHeight = document.documentElement.clientHeight;
                 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                 for(var i = n; i < len; i++) {
-                    if(images[i].offsetTop < seeHeight + scrollTop) {
+                    if(images[i].offsetTop < seeHeight + scrollTop && getComputedStyle(images[i],null)['margin-left'].slice(0,3) >= 0) {
                         if(images[i].getAttribute('src') === 'http://hanayuki.me/img/loading/loading.gif') {
                             console.log("lazy");
                             images[i].src = images[i].getAttribute('data-src');
