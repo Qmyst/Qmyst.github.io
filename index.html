@@ -145,7 +145,7 @@ description: "某绅士的无聊兴趣"
     // 懒加载
     function lazyload() {
 
-        var images = document.getElementsByTagName('img');
+        var images = document.getElementsByClassName('scale');
         var len    = images.length;
         var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历
 //        return function() {
@@ -157,8 +157,13 @@ description: "某绅士的无聊兴趣"
                             console.log("lazy");
                             images[i].src = images[i].getAttribute('data-src');
                         }
-                        n = n + 1;
                     }
+                    if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
+                        imgs[i].style.marginLeft = 0;
+                        imgs[i].style.opacity = 1;
+                    }
+                    n = n + 1;
+
                 }
 
 //        }
@@ -175,11 +180,7 @@ description: "某绅士的无聊兴趣"
         var seeHeight = document.documentElement.clientHeight;
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         for (var i=n;i<imgs.length;i++){
-            if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
-                imgs[i].style.marginLeft = 0;
-                imgs[i].style.opacity = 1;
-                n +=1;
-            }
+
         }
     }
     moveUp();
