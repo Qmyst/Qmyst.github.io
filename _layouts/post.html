@@ -357,11 +357,10 @@ comments: true
 <script>
     var imgs = document.getElementsByTagName('img');
 //    var original = '';
-    for (var i=0;i<imgs.length;i++){
+    if (document.body.offsetWidth > 768){
         var bool = true;
         imgs[i].index = i;
-        if (document.body.offsetWidth > 768){
-
+        for (var i=0;i<imgs.length;i++){
             imgs[i].onclick = function () {
 //                alert(1);
                 if (bool){
@@ -405,6 +404,8 @@ comments: true
                 bool = true;
             }
         }
+        lazyload();
+        window.addEventListener("scroll",lazyload);
     }
     function animation(ele,target) {
 //        console.log(233);
@@ -473,8 +474,7 @@ comments: true
             n = n + 1;
         }
     }
-    lazyload();
-    window.addEventListener("scroll",lazyload);
+
 
 </script>
 <script>
