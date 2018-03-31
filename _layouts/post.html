@@ -453,22 +453,25 @@ comments: true
             }
         }
     };
-function lazyload() {
-//    var images = document.getElementsByTagName("img");
-//    var len    = images.length;
-    var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历
+    function lazyload() {
+    //    var images = document.getElementsByTagName("img");
+    //    var len    = images.length;
+        var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历
 
-    var seeHeight = document.documentElement.clientHeight;
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    for(var i = n; i < imgs.length; i++) {
-        //    往上移动效果
-        if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
-            imgs[i].style.animation = "fan 1s";
-            imgs[i].style.opacity = 1;
+        var seeHeight = document.documentElement.clientHeight;
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        for(var i = n; i < imgs.length; i++) {
+            //    往上移动效果
+            if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
+                imgs[i].style.animation = "fan 1s";
+                imgs[i].style.opacity = 1;
+            }
+            n = n + 1;
         }
-        n = n + 1;
     }
-}
+    lazyload();
+    window.addEventListener("scroll",lazyload);
+
 </script>
 <script>
     window.onload = function () {
