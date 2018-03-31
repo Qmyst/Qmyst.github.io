@@ -298,7 +298,7 @@ comments: true
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         border-radius: 15px;
-        transition: transform .5s,padding .5s,border .5s,box-shadow .5s,margin-top .5s,opatity .5s;
+        transition: transform .5s,padding .5s,border .5s,box-shadow .5s,margin-top .5s,opacity 5.5s;
         /*border: 2px solid #d9edf7;*/
         position: relative;
         padding: 6px;
@@ -464,6 +464,7 @@ comments: true
             //    往上移动效果
             if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
                 imgs[i].style.animation = "fan 1s";
+                imgs[i].style.marginTop = 0;
                 imgs[i].style.opacity = 1;
             }
             n = n + 1;
