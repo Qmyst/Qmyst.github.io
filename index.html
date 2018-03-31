@@ -158,6 +158,7 @@ description: "某绅士的无聊兴趣"
                             images[i].src = images[i].getAttribute('data-src');
                         }
                     }
+                    //    往上移动效果
                     if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
                         imgs[i].style.marginLeft = 0;
                         imgs[i].style.opacity = 1;
@@ -173,18 +174,7 @@ description: "某绅士的无聊兴趣"
     lazyload();
     window.addEventListener('scroll', lazyload, false);
 
-//    往上移动效果
-    function moveUp() {
-//        var divs = document.getElementsByClassName("post-preview");
-        var n = 0;
-        var seeHeight = document.documentElement.clientHeight;
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        for (var i=n;i<imgs.length;i++){
 
-        }
-    }
-    moveUp();
-    window.addEventListener('scroll', moveUp, false);
 
 </script>
 <script>
