@@ -156,7 +156,7 @@ description: "某绅士的无聊兴趣"
                 var seeHeight = document.documentElement.clientHeight;
                 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                 for(var i = n; i < len; i++) {
-                    if(images[i].offsetTop < seeHeight + scrollTop && getComputedStyle(images[i],null)['margin-left'].slice(0,3) >= 0) {
+                    if((images[i].offsetTop < seeHeight + scrollTop) && (getComputedStyle(images[i],null)['margin-left'].slice(0,2) >= 0)) {
                         if(images[i].getAttribute('src') === 'http://hanayuki.me/img/loading/loading.gif') {
                             console.log("lazy");
                             images[i].src = images[i].getAttribute('data-src');
