@@ -293,6 +293,8 @@ comments: true
         display: none;
     }
     img {
+        margin-top: 25px;
+        opacity:0;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         border-radius: 15px;
@@ -344,7 +346,8 @@ comments: true
         transition: padding .3s;
         box-shadow: none;
         -moz-box-shadow: none;
-        -webkit-box-shadow: none">
+        -webkit-box-shadow: none;
+        opacity: 1;">
 <!--{% endif %}-->
 
 <script>
@@ -361,8 +364,8 @@ comments: true
 //                original = this.style.width;
 //                this.style.width = imgs[this.index].naturalWidth+"px";
                     if (this === imgs[0]){
-                        this.style.marginTop = "125px";
-                        this.style.transform = "scale(1.25)";
+                        this.style.transform = "translate(0,125px) scale(1.25)";
+//                        this.style.transform = "scale(1.25)";
 //                        this.style.transition = "transform .5s,padding .5s,border .5s,box-shadow .5s";
 //                        var speed = 10;
 //                        clearInterval(imgs[0].timer);
@@ -380,7 +383,8 @@ comments: true
                     bool = false;
                 } else {
                     if (this === imgs[0]){
-                        this.style.marginTop = "0";
+                        this.style.transform = "translate(0,0)";
+//                        this.style.marginTop = "0";
 //                        this.style.transition = "all .5s"
                     }
 //                this.style.width = "65%";
@@ -391,8 +395,8 @@ comments: true
             }
             imgs[i].onmouseleave = function () {
 //                this.style.transition = "all .5s";
-                this.style.transform = "scale(1)";
-                this.style.marginTop = "0";
+                this.style.transform = "scale(1) translate(0,0)";
+//                this.style.marginTop = "0";
                 this.style.zIndex = 0;
                 bool = true;
             }
@@ -445,6 +449,22 @@ comments: true
             }
         }
     };
+function lazyload() {
+//    var images = document.getElementsByTagName("img");
+//    var len    = images.length;
+    var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历
+
+    var seeHeight = document.documentElement.clientHeight;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    for(var i = n; i < imgs.length; i++) {
+        //    往上移动效果
+        if(imgs[i].offsetTop+document.getElementsByTagName('header')[0].offsetHeight+20<=scrollTop+seeHeight){
+            imgs[i].style.marginLeft = 0;
+            imgs[i].style.opacity = 1;
+        }
+        n = n + 1;
+    }
+}
 </script>
 <script>
     window.onload = function () {
