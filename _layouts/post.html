@@ -359,8 +359,8 @@ comments: true
 //    var original = '';
     if (document.body.offsetWidth > 768){
         var bool = true;
-        imgs[i].index = i;
         for (var i=0;i<imgs.length;i++){
+            imgs[i].index = i;
             imgs[i].onclick = function () {
 //                alert(1);
                 if (bool){
