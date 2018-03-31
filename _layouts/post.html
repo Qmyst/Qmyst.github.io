@@ -407,11 +407,7 @@ comments: true
         lazyload();
         window.addEventListener("scroll",lazyload);
     }
-    if (document.body.offsetWidth < 768){
-        for (var j=0;j<imgs.length;i++){
-            imgs[j].style.opacity = 1;
-        }
-    }
+    
     function animation(ele,target) {
 //        console.log(233);
         clearInterval(ele.timer);
