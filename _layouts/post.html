@@ -330,6 +330,9 @@ comments: true
         to{transform:rotateY(0)}
     }
     @media screen and (max-width: 768px) {
+        img {
+            opacity: 1;
+        }
         .top { width: 50% !important;
             right: -20%;
             bottom: -15%;
@@ -407,7 +410,7 @@ comments: true
         lazyload();
         window.addEventListener("scroll",lazyload);
     }
-    
+
     function animation(ele,target) {
 //        console.log(233);
         clearInterval(ele.timer);
