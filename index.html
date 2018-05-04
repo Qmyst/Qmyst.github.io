@@ -122,10 +122,7 @@ description: "某绅士的无聊兴趣"
         if (typeof x == "string") return document.getElementById(x);
         return x;
     }
-    if (document.body.offsetWidth > 768){
 
-        document.getElementById("iFrame").src = "//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430";
-    }
     var imgs = document.getElementsByClassName('scale');
     var original = '';
     for (var i=0;i<imgs.length;i++){
@@ -229,7 +226,11 @@ description: "某绅士的无聊兴趣"
 //            $(this).css("width",s);
 //
 //        })
-        
+
+        if (document.body.offsetWidth > 768){
+
+            document.getElementById("iFrame").src = "//music.163.com/outchain/player?type=0&id=2058149387&auto=0&height=430";
+        }
     }
 
 
